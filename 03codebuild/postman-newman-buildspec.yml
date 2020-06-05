@@ -8,7 +8,7 @@ phases:
     commands:
       - docker images
       - touch ajay
-      - docker run -itd -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-baseline.py -t http://petstore-demo-endpoint.execute-api.com/petstore/pets
+      - docker run -td -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-baseline.py -t http://petstore-demo-endpoint.execute-api.com/petstore/pets
         -g gen.conf -r testreport.html
       - docker images
       - docker ps
