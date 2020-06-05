@@ -11,6 +11,7 @@ phases:
       - docker run -itd -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-baseline.py -t http://petstore-demo-endpoint.execute-api.com/petstore/pets
         -g gen.conf -r testreport.html
       - docker images
+      - docker ps
       - docker ps -a
       - docker exec -it 1eb9da3a12d5 /bin/bash
       - ls
