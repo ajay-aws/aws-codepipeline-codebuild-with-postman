@@ -12,7 +12,7 @@ phases:
         -g gen.conf -r testreport.html
       - docker images
       - docker ps -a
-      - docker exec -it ajay54 /bin/bash
+      - docker exec -it 1eb9da3a12d5 /bin/bash
       - ls
   
   post_build:
